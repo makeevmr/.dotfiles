@@ -48,10 +48,13 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press kk fast to exit insert mode
-keymap("i", "kk", "<ESC>", opts)
+-- Exit insert mode
+keymap("i", "<leader>k", "<ESC>", opts)
 
 -- Visual --
+-- Exit visual mode
+keymap("v", "<leader>k", "<ESC>", opts)
+
 -- Stay in indent mode
 keymap("v", "<S-Tab>", "<gv", opts)
 keymap("v", "<Tab>", ">gv", opts)
@@ -62,6 +65,9 @@ keymap("v", "<Tab>", ">gv", opts)
 -- keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
+-- Exit visual block mode
+keymap("x", "<leader>k", "<ESC>", opts)
+
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
