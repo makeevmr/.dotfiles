@@ -3,9 +3,19 @@ local lspconfig = require('lspconfig')
 -- Server-specific settings. See `:help lspconfig-setup`
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
--- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>p', vim.diagnostic.goto_prev)
-vim.keymap.set('n', '<leader>n', vim.diagnostic.goto_next)
+
+vim.keymap.set('n', '<leader>n', function()
+    vim.diagnostic.jump({
+        count=1,
+        float=true
+    })
+end)
+vim.keymap.set('n', '<leader>n', function()
+    vim.diagnostic.jump({
+        count=-1,
+        float=true
+    })
+end)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.setloclist)
 
 
