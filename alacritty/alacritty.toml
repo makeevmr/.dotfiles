@@ -24,7 +24,7 @@ history = 50000
 multiplier = 3
 
 [font]
-size = 9
+size = 17
 builtin_box_drawing = false
 
 [font.normal]
