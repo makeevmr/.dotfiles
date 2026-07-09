@@ -73,8 +73,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
     desc = 'LSP: Disable hover capability from Ruff',
 })
-
-
-lspconfig.util.default_config.on_init = function(client, _)
-    client.server_capabilities.semanticTokensProvider = nil
-end
