@@ -1,7 +1,3 @@
-shell = "/usr/bin/zsh"
-live_config_reload = true
-import = ["~/.dotfiles/alacritty/colors.toml"]
-
 [env]
 TERM = "xterm-256color"
 COLORTERM = "truecolor"
@@ -24,7 +20,7 @@ history = 50000
 multiplier = 3
 
 [font]
-size = 17
+size = 9
 builtin_box_drawing = false
 
 [font.normal]
@@ -49,3 +45,10 @@ y = 0
 
 [selection]
 save_to_clipboard = true
+
+[general]
+live_config_reload = true
+import = ["~/.dotfiles/alacritty/colors.toml"]
+
+[terminal]
+shell = "/usr/bin/zsh"
