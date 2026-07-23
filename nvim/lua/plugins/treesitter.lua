@@ -50,10 +50,3 @@ require('nvim-treesitter').setup {
     },
 }
 
--- Ensure Tree-sitter starts for all installed languages (fix for b:ts_highlight not being set)
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = supported_file_types,
-    callback = function()
-        vim.treesitter.start()
-    end,
-})
