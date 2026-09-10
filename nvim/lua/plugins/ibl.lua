@@ -1,5 +1,5 @@
--- Gruvbox aqua color for current scope highlighting
-vim.api.nvim_set_hl(0, 'IblScope', { fg = "#8ec07c" })
+-- Tokyo Night cyan for current scope highlighting
+vim.api.nvim_set_hl(0, 'IblScope', { fg = "#7dcfff" })
 
 require("ibl").setup({
     -- Show scope lines in default gray color

@@ -1,7 +1,5 @@
-vim.o.background = "dark" -- or "light" for light mode
+vim.o.background = "dark"
 
--- setup must be called before loading the colorscheme
--- gruvbox
 require("gruvbox").setup({
     undercurl = true,
     underline = true,
@@ -17,8 +15,8 @@ require("gruvbox").setup({
     invert_signs = false,
     invert_tabline = false,
     invert_intend_guides = false,
-    inverse = true,    -- invert background for search, diffs, statuslines and errors
-    contrast = "hard", -- can be "hard", "soft" or empty string
+    inverse = true,
+    contrast = "hard",
     palette_overrides = {
         dark0_hard = "#000000",
     },
@@ -29,4 +27,29 @@ require("gruvbox").setup({
     transparent_mode = false,
 })
 
-vim.cmd.colorscheme "gruvbox"
+require("tokyonight").setup({
+    styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+        functions = { italic = false },
+        variables = { italic = false },
+    },
+    on_colors = function(colors)
+        colors.bg = "#000000"
+    end,
+    on_highlights = function(highlights, colors)
+        for _, group in ipairs({
+            "NeoTreeNormal",
+            "NeoTreeNormalNC",
+            "NeoTreeEndOfBuffer",
+        }) do
+            highlights[group] = highlights[group] or {}
+            highlights[group].bg = colors.bg
+        end
+
+        highlights.ColorColumn = { bg = colors.bg_highlight }
+    end,
+})
+
+-- Tokyo Night remains the active colorscheme.
+vim.cmd.colorscheme("tokyonight-night")

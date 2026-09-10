@@ -34,9 +34,12 @@ require("lazy").setup({
     {
         'neovim/nvim-lspconfig'
     },
-    -- Color scheme (https://github.com/ellisonleao/gruvbox.nvim)
+    -- Color schemes
     {
         "ellisonleao/gruvbox.nvim", priority = 1000
+    },
+    {
+        "folke/tokyonight.nvim", lazy = false, priority = 1000
     },
     -- For autocomplete visualization (https://github.com/hrsh7th/nvim-cmp)
     {

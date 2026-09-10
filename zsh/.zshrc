@@ -12,6 +12,18 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Tokyo Night accents for shell plugins; the Gallois prompt uses Alacritty ANSI colors.
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#565f89"
+ZSH_HIGHLIGHT_STYLES[comment]="fg=#565f89"
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=#f7768e"
+ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=#bb9af7"
+ZSH_HIGHLIGHT_STYLES[command]="fg=#7dcfff"
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=#7aa2f7"
+ZSH_HIGHLIGHT_STYLES[alias]="fg=#7dcfff"
+ZSH_HIGHLIGHT_STYLES[path]="fg=#9ece6a,underline"
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]="fg=#9ece6a"
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=#9ece6a"
+
 # Update automatically without asking
 zstyle ':omz:update' mode auto
 

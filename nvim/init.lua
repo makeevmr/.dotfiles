@@ -4,7 +4,7 @@
 require('core.config')   -- Basic options
 require('core.mappings') -- Keymaps
 require('core.plugins')  -- Lazyvim for plugins installation
-require('core.colors')   -- Gruvbox color scheme
+require('core.colors')   -- Tokyo Night color scheme
 
 -- Plugins
 require('plugins.autopairs')  -- Autopair brackets support

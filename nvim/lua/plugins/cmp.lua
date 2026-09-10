@@ -43,8 +43,8 @@ cmp.setup({
 })
 
 -- Custom highlight groups
-vim.api.nvim_set_hl(0, 'CmpNormal', { bg = '#3c3836', fg = '#ebdbb2' })
-vim.api.nvim_set_hl(0, 'CmpBorder', { bg = '#3c3836', fg = '#928374' })
-vim.api.nvim_set_hl(0, 'CmpSelection', { bg = '#504945', fg = '#ebdbb2' })
-vim.api.nvim_set_hl(0, 'CmpDocNormal', { bg = '#3c3836', fg = '#ebdbb2' })
-vim.api.nvim_set_hl(0, 'CmpDocBorder', { bg = '#3c3836', fg = '#928374' })
+vim.api.nvim_set_hl(0, 'CmpNormal', { bg = '#1f2335', fg = '#c0caf5' })
+vim.api.nvim_set_hl(0, 'CmpBorder', { bg = '#1f2335', fg = '#3b4261' })
+vim.api.nvim_set_hl(0, 'CmpSelection', { bg = '#33467c', fg = '#c0caf5' })
+vim.api.nvim_set_hl(0, 'CmpDocNormal', { bg = '#1f2335', fg = '#c0caf5' })
+vim.api.nvim_set_hl(0, 'CmpDocBorder', { bg = '#1f2335', fg = '#3b4261' })
