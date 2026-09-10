@@ -13,6 +13,7 @@ Install programs with `./install.sh <program_name_1> <program_name_2> ...`
 Available programs:
 - alacritty
 - nvim
+- sway
 - tmux
 - zsh
 

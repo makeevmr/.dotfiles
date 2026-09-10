@@ -26,6 +26,11 @@ install_nvim() {
     sudo snap install nvim --classic
 }
 
+install_sway() {
+    echo "Installing sway..."
+    sudo apt install fuzzel gtklock sway waybar
+}
+
 install_tmux() {
     echo "Installing tmux..."
     sudo apt install -y tmux
@@ -69,6 +74,7 @@ install_zsh() {
 declare -A installers=(
     [alacritty]=install_alacritty
     [nvim]=install_nvim
+    [sway]=install_sway
     [tmux]=install_tmux
     [zsh]=install_zsh
 )
