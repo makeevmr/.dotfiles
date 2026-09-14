@@ -77,9 +77,22 @@ static gboolean update_labels(gpointer data) {
 	return G_SOURCE_CONTINUE;
 }
 
+static void show_password_form_on_all_outputs(struct GtkLock *gtklock) {
+	for (guint i = 0; i < gtklock->windows->len; i++) {
+		struct Window *window = g_array_index(gtklock->windows, struct Window *, i);
+		gtk_revealer_set_reveal_child(GTK_REVEALER(window->body_revealer), TRUE);
+	}
+}
+
 void on_activation(struct GtkLock *gtklock, int id) {
 	self_id = id;
 	g_timeout_add_seconds(1, update_labels, gtklock);
+}
+
+void on_focus_change(struct GtkLock *gtklock, struct Window *window, struct Window *old_window) {
+	(void)window;
+	(void)old_window;
+	show_password_form_on_all_outputs(gtklock);
 }
 
 void on_window_create(struct GtkLock *gtklock, struct Window *window) {
