@@ -189,6 +189,5 @@
     "[python]": {
         "editor.defaultFormatter": "jkillian.custom-local-formatters"
     },
-    "yandex-code-assist.userClassification": "nonTech",
-    "workbench.colorTheme": "Tokyo Night"
+    "yandex-code-assist.userClassification": "nonTech"
 }

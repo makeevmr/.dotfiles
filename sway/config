@@ -63,12 +63,14 @@ seat * keyboard_grouping smart
 
 ### Idle configuration
 
-# gtklock 2.x daemonizes before its window is ready. Keep the display dark
-# and delay suspend briefly so the workspace cannot flash on resume.
+# Keep Sway's lock timer inhibited during audio or video playback.
+exec ~/.config/sway/media-idle-inhibit.sh
+
+# Lock after five minutes of real inactivity and before suspend. Give
+# daemonized gtklock a moment to map its surface before the system sleeps.
 exec swayidle -w \
     timeout 300 '~/.config/gtklock/lock.sh -d' \
-    before-sleep 'swaymsg "output * power off"; ~/.config/gtklock/lock.sh -d; sleep 1' \
-    after-resume 'swaymsg "output * power on"'
+    before-sleep '~/.config/gtklock/lock.sh -d; sleep 1'
 
 ### Key bindings
 
