@@ -1,0 +1,194 @@
+{
+    // Window
+    "window.titleBarStyle": "custom",
+    "window.enableMenuBarMnemonics": false,
+
+    // Security
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.emptyWindow": false,
+    "security.workspace.trust.enabled": false,
+
+    // Workbench
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+    // Editor
+    "editor.fontFamily": "JetBrainsMonoNerdFont",
+    "editor.inlayHints.enabled": "off",
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+    "editor.rulers": [120],
+
+    // To add: Developer: Inspect Editors Tokens and Scopes
+    "editor.tokenColorCustomizations": {
+        "[Tokyo Night]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "comment",
+                        "markup.italic",
+                        "storage.type",
+                        "storage.modifier",
+                        "keyword",
+                        "keyword.control",
+                        "keyword.control.flow",
+                        "keyword.control.conditional",
+                        "keyword.control.return.cpp",
+                        "variable.language",
+                        "entity.other.attribute-name"
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        }
+    },
+
+    "editor.cursorBlinking": "solid",
+
+    // Vim
+    "vim.useSystemClipboard": true,
+
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(255, 255, 0, 0.35)",
+    "vim.highlightedyank.duration": 300,
+
+    "vim.leader": "<space>",
+
+    "vim.cursorStylePerMode": {
+        "normal": "block",
+        "insert": "block",
+        "visual": "block",
+        "visualline": "block",
+        "visualblock": "block",
+        "replace": "block"
+    },
+
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["code-telescope.fuzzy.file"]
+        },
+        {
+            "before": ["<leader>", "f", "b"],
+            "commands": ["code-telescope.fuzzy.recentFiles"]
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDeclaration"]
+        },
+        {
+            "before": ["H"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["L"],
+            "commands": ["workbench.action.nextEditor" ]
+        },
+        {
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "z", "z"]
+        },
+        {
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "z", "z"]
+        },
+        {
+            "before": ["<leader>", "n"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["<leader>", "N"],
+            "commands":  ["editor.action.marker.prev"]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+            "before": ["<C-j>"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.view.explorer"],
+            "when": "!filesExplorerFocus"
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.focusActiveEditorGroup"],
+            "when": "filesExplorerFocus"
+        },
+        {
+            "before": ["<leader>", "r", "n"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["c", "i", "e"],
+            "commands": []
+        }
+    ],
+
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["<Tab>"],
+            "after": [">", "g", "v"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "after": ["<", "g", "v"]
+        },
+        {
+            "before": ["<S-k>"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        },
+        {
+            "before": ["<S-j>"],
+            "commands": ["editor.action.moveLinesDownAction"]
+        },
+        {
+            "before": ["<leader>", "p"],
+            "after": ["\"", "_", "d", "P"]
+        }
+    ],
+
+    "vim.insertModeKeyBindings": [],
+
+    "[cpp]": {
+        "editor.defaultFormatter": "jkillian.custom-local-formatters"
+    },
+    "codeTelescope.layout.leftSideWidthPct": 70,
+    "codeTelescope.layout.rightSideWidthPct": 30,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "yandex-code-assist.acp.openAiAuthPromptEnabled": true,
+    "[python]": {
+        "editor.defaultFormatter": "jkillian.custom-local-formatters"
+    },
+    "yandex-code-assist.userClassification": "nonTech",
+    "workbench.colorTheme": "Tokyo Night"
+}
