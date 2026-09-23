@@ -6,10 +6,10 @@
     // Security
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.emptyWindow": false,
-    "security.workspace.trust.enabled": false,
 
     // Workbench
     "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.experimental.modernUI": false,
 
     // Editor
     "editor.fontFamily": "JetBrainsMonoNerdFont",
@@ -179,7 +179,7 @@
     "vim.insertModeKeyBindings": [],
 
     "[cpp]": {
-        "editor.defaultFormatter": "jkillian.custom-local-formatters"
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
     "codeTelescope.layout.leftSideWidthPct": 70,
     "codeTelescope.layout.rightSideWidthPct": 30,
@@ -189,5 +189,8 @@
     "[python]": {
         "editor.defaultFormatter": "jkillian.custom-local-formatters"
     },
-    "yandex-code-assist.userClassification": "nonTech"
+    "yandex-code-assist.userClassification": "nonTech",
+    "dev.containers.gitCredentialHelperConfigLocation": "none",
+    "dev.containers.copyGitConfig": false,
+    "git.openRepositoryInParentFolders": "never"
 }
