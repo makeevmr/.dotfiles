@@ -71,6 +71,10 @@ exec ~/.config/sway/media-idle-inhibit.sh
 exec swayidle -w \
     timeout 300 '~/.config/gtklock/lock.sh -d' \
     before-sleep '~/.config/gtklock/lock.sh -d; sleep 1'
+    
+# Fn+4 emits XF86Sleep on this laptop. Keep logind from suspending on that
+# key; the inhibitor exits together with Sway.
+exec systemd-inhibit --what=handle-suspend-key --who=Sway --why="Fn+4 disabled in Sway config" --mode=block swaymsg -m -t subscribe '["shutdown"]'
 
 ### Key bindings
 
