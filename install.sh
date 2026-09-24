@@ -33,7 +33,9 @@ install_sway() {
 
 install_tmux() {
     echo "Installing tmux..."
-    sudo apt install -y tmux
+    sudo apt install -y tmux git
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ~/.tmux/plugins/tpm/bin/install_plugins
 }
 
 install_zsh() {

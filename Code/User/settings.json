@@ -179,7 +179,7 @@
     "vim.insertModeKeyBindings": [],
 
     "[cpp]": {
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+        "editor.defaultFormatter": "jkillian.custom-local-formatters"
     },
     "codeTelescope.layout.leftSideWidthPct": 70,
     "codeTelescope.layout.rightSideWidthPct": 30,
@@ -192,5 +192,8 @@
     "yandex-code-assist.userClassification": "nonTech",
     "dev.containers.gitCredentialHelperConfigLocation": "none",
     "dev.containers.copyGitConfig": false,
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "clangd.path": "/home/art-makeev/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/22.1.6/clangd_22.1.6/bin/clangd",
+    "security.workspace.trust.enabled": false,
+    "debug.breakpointsView.presentation": "tree"
 }
