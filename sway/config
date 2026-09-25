@@ -20,7 +20,7 @@ set $menu fuzzel
 # dbus-activated and systemd-launched apps do not inherit sway's environment,
 # so push the session vars into both. Without this, an app started via dbus
 # activation sees no WAYLAND_DISPLAY and falls back to x11.
-exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP
+exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP
 
 # Use dark theme for standard applications
 exec_always {

@@ -195,5 +195,6 @@
     "git.openRepositoryInParentFolders": "never",
     "clangd.path": "/home/art-makeev/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/22.1.6/clangd_22.1.6/bin/clangd",
     "security.workspace.trust.enabled": false,
-    "debug.breakpointsView.presentation": "tree"
+    "debug.breakpointsView.presentation": "tree",
+    "python.analysis.typeCheckingMode": "standard"
 }

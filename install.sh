@@ -29,6 +29,7 @@ install_nvim() {
 install_sway() {
     echo "Installing sway..."
     sudo apt install fuzzel gtklock sway waybar
+    "$HOME/.dotfiles/zsh/setup-sway-environment.sh"
 }
 
 install_tmux() {
@@ -41,7 +42,7 @@ install_tmux() {
 install_zsh() {
     echo "Installing zsh..."
 
-    sudo apt install -y zsh
+    sudo apt install -y zsh git
     if [[ "$SHELL" != "$(which zsh)" ]]; then
         chsh -s "$(which zsh)"
     fi

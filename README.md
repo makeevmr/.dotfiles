@@ -17,4 +17,4 @@ Available programs:
 - tmux
 - zsh
 
-Example: `./install.sh alacritty zsh`
+Example: `./install.sh alacritty zsh

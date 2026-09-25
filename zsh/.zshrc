@@ -37,3 +37,9 @@ export NVM_DIR="$HOME/.nvm"
 export EDITOR="/snap/bin/nvim"
 
 eval $(skotty ssh env)
+
+if command -v arc >/dev/null 2>&1 &&
+   command -v mountpoint >/dev/null 2>&1 &&
+   ! mountpoint -q "$HOME/arcadia"; then
+    (cd "$HOME" && arc mount arcadia)
+fi
