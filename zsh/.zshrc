@@ -30,6 +30,15 @@ zstyle ':omz:update' mode auto
 # Aliases
 alias set_keybright='sudo brightnessctl -d tpacpi::kbd_backlight set'
 
+# Keep Codex output in tmux scrollback for prefix + [ and copy-mode search.
+codex() {
+    if [[ -n "$TMUX" ]]; then
+        command codex --no-alt-screen "$@"
+    else
+        command codex "$@"
+    fi
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
