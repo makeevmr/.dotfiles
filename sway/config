@@ -63,13 +63,14 @@ seat * keyboard_grouping smart
 
 ### Idle configuration
 
-# Keep Sway's lock timer inhibited during audio or video playback.
+# Inhibit idle locking during active audio or MPRIS playback anywhere.
+# Sway also honors application-provided Wayland idle inhibitors.
 exec ~/.config/sway/media-idle-inhibit.sh
 
 # Lock after five minutes of real inactivity and before suspend. Give
 # daemonized gtklock a moment to map its surface before the system sleeps.
 exec swayidle -w \
-    timeout 300 '~/.config/gtklock/lock.sh -d' \
+    timeout 300 '~/.config/sway/media-idle-inhibit.sh --lock' \
     before-sleep '~/.config/gtklock/lock.sh -d; sleep 1'
     
 # Fn+4 emits XF86Sleep on this laptop. Keep logind from suspending on that

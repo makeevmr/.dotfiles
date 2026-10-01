@@ -28,7 +28,7 @@ install_nvim() {
 
 install_sway() {
     echo "Installing sway..."
-    sudo apt install fuzzel gtklock sway waybar
+    sudo apt install fuzzel gtklock jq pulseaudio-utils sway swayidle waybar
     "$HOME/.dotfiles/zsh/setup-sway-environment.sh"
 }
 
