@@ -44,8 +44,7 @@ vim.opt.undofile = true                    -- Enable persistent undo
 vim.opt.wrap = true                        -- Display lines as one long line
 vim.opt.linebreak = true                   -- Companion to wrap, don't split words
 vim.opt.cursorline = true                  -- Highlight cursor line
--- vim.opt.colorcolumn = '101'                    -- Line lenght marker at 100 columns
-vim.opt.colorcolumn = '81'                 -- Line lenght marker at 81 columns
+vim.opt.colorcolumn = '101'                -- Line lenght marker at 101 columns
 vim.wo.number = true                       -- Hybrid number lines
 vim.wo.relativenumber = true               -- Hybrid number lines
 vim.opt.guicursor = "n-v-i-c:block-Cursor" -- Block cursorim.wo.relativenumber = true
@@ -64,10 +63,10 @@ vim.opt.sidescrolloff = 8   -- Minimal number of screen columns either side of c
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
-vim.opt.hidden = true     -- Enable background buffers
-vim.opt.history = 100     -- Remember N lines in history
-vim.opt.synmaxcol = 240   -- Max column for syntax highlight
-vim.opt.updatetime = 250  -- Ms to wait for trigger an event
+vim.opt.hidden = true    -- Enable background buffers
+vim.opt.history = 100    -- Remember N lines in history
+vim.opt.synmaxcol = 240  -- Max column for syntax highlight
+vim.opt.updatetime = 250 -- Ms to wait for trigger an event
 
 -----------------------------------------------------------
 -- Font
@@ -98,9 +97,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    io.stdout:write("\027[<0u")
-  end
+    callback = function()
+        io.stdout:write("\027[<0u")
+    end
 })
 
 -----------------------------------------------------------

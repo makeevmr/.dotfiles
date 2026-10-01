@@ -59,6 +59,10 @@ require("lazy").setup({
     {
         'windwp/nvim-autopairs'
     },
+    -- Scrollbarh (https://github.com/petertriho/nvim-scrollbar)
+    {
+        'petertriho/nvim-scrollbar'
+    },
     -- Surround (https://github.com/kylechui/nvim-surround)
     {
         'kylechui/nvim-surround'
@@ -92,9 +96,5 @@ require("lazy").setup({
     {
         "SmiteshP/nvim-navic",
         dependencies = "neovim/nvim-lspconfig"
-    },
-    -- Show indent (https://github.com/lukas-reineke/indent-blankline.nvim)
-    {
-        "lukas-reineke/indent-blankline.nvim",
     }
 })
