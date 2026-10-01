@@ -38,7 +38,14 @@ output * bg ~/.dotfiles/sway/background_3840x2160.jpg fill
 
 ### Output configuration
 
-output DP-1 mode 3840x2160@29.981Hz scale 2
+# Use scale 1 for other external monitors.
+output * scale 1
+
+# Preserve the laptop's current HiDPI scaling.
+output eDP-1 scale 2
+
+# Match the 4K monitor by identity so its settings follow it across ports.
+output "Lenovo Group Limited LEN P27u-10 0x01010101" mode 3840x2160@29.981Hz scale 2
 
 # Touchpad
 input type:touchpad {
