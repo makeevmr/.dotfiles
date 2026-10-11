@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/language", "wireplumber", "backlight", "custom/power-profile", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "temperature", "memory", "disk", "battery", "tray"],
+    "modules-right": ["cpu", "custom/temperature", "memory", "disk", "battery", "tray"],
     "sway/workspaces": {
         "on-click": "activate"
     },
@@ -43,13 +43,11 @@
             "critical": 90
         },
     },
-    "temperature": {
+    // Native temperature warning-threshold requires Waybar >= 0.12.
+    "custom/temperature": {
+        "exec": "awk -v warning=75 -v critical=90 '{t = int(($1 + 500) / 1000); printf \"%d\\n%d°C\\n%s\\n\", t, t, (t >= critical ? \"critical\" : t >= warning ? \"warning\" : \"normal\")}' /sys/class/thermal/thermal_zone0/temp",
         "interval": 10,
-        "format": "TEMP: {temperatureC}°C",
-        "states": {
-            "warning": 70,
-            "critical": 90
-        }
+        "format": "TEMP: {}°C"
     },
     "memory": {
         "interval": 30,
